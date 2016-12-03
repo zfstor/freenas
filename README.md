@@ -1,9 +1,14 @@
-## IMPORTANT NOTE:  This is the master branch of freenas, which is used only for the creation and testing of 9.10-Nightlies builds.  If you are building or developing for:
+# What is it?
 
-* FreeNAS 10 / 9.10:	https://github.com/freenas/freenas-build
-* Prior Releases:	Use the 9.3-STABLE branch (and old build system)
+ZFStor is a fork of FreeNAS 9.10.
 
-# Building FreeNAS
+# Why?
+
+FreeNAS 9 is/was a stable product. FreeNAS 10 was a rewrite from the ground up and that made FreeNAS 9 lag behind. ZFStor is intended to keep the code base stable and at the same time evolve it to use latest versions of FreeBSD.
+
+# Building ZFStor
+
+* ZFStor 9.10:	https://github.com/zfstor/build
 
 To build the system (experts only):
 
@@ -21,7 +26,7 @@ To build the system (experts only):
   * devel/gmake
   * sysutils/cdrtools
   * archivers/pxz
-  * lang/python3 
+  * lang/python3
   * sysutils/grub2-pcbsd
   * sysutils/xorriso
   * sysutils/grub2-efi
@@ -35,21 +40,21 @@ To build the system (experts only):
 
 ```
 % cd /path/to/your-build-filesystem
-% git clone https://github.com/freenas/freenas-build
-% cd freenas-build
+% git clone https://github.com/zfstor/build
+% cd build
 ```
 
 * Build it
 
 ```
-% make checkout PROFILE=freenas9
-% make release PROFILE=freenas9
+% make checkout
+% make release
 ```
 
 * Update the source tree, to pull in new source code changes
 
 ```
-% make update PROFILE=freenas9
+% make update
 ```
 
 This will also fetch TrueOS and ports for the build from github.
