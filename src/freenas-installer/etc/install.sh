@@ -1069,7 +1069,7 @@ menu_install()
 	chown -R www:www /tmp/data/data
     fi
 
-    local OS=FreeNAS
+    local OS=ZFStor
     if is_truenas; then
         OS=TrueNAS
     fi
