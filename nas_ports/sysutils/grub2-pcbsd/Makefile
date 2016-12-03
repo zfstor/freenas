@@ -21,6 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 WRKSRC=		${WRKDIR}/grub-2.02
 CONFLICTS=	grub-0* grub2-2*
 SSP_UNSAFE=	yes
+USE_GCC=	yes
 ACLOCAL_ARGS=	-Im4
 GNU_CONFIGURE=	yes
 USES=		autoreconf bison cpe gettext gmake makeinfo python tar:xz
