@@ -14,11 +14,11 @@ body:before {
 body, html { overflow:hidden; width:100%; height:100%; margin:0; padding:0; }
 
 #page-header {
-    height:72px;
+    height:44px;
     background: #464C53 url("../images/headerbg.png") repeat-x;
 }
 #footer {
-    height:45px;
+    height:30px;
     background: #464C53 url("../images/footerbg.png") repeat-x;
 }
 
@@ -74,7 +74,7 @@ body, html { overflow:hidden; width:100%; height:100%; margin:0; padding:0; }
 }
 
 #topLayout {
-    height:125px;
+    height:97px;
     overflow:hidden;
 }
 
@@ -91,7 +91,7 @@ body, html { overflow:hidden; width:100%; height:100%; margin:0; padding:0; }
 }
 
 #footerLayout {
-    height:45px;
+    height:30px;
     width:100%;
     padding-bottom:0px;
 }
