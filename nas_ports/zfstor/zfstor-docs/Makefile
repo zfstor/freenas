@@ -1,11 +1,11 @@
 # $FreeBSD$
 
-PORTNAME=       freenas-docs
+PORTNAME=       zfstor-docs
 PORTVERSION=	${PRODUCT_VERSION:C/\-.*//:C/\_.*//}
 PORTREVISION=	${REVISION}
 
-CATEGORIES=     freenas
-VALID_CATEGORIES+=	freenas
+CATEGORIES=     zfstor
+VALID_CATEGORIES+=	zfstor
 
 MAINTAINER=     dev@ixsystems.com
 COMMENT=        Userguide for UI
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	sphinx-build:${PORTSDIR}/textproc/py-sphinx \
 USES=	perl5 python:build
 
 EXTRACT_ONLY=
-WRKSRC=		/usr/freenas_docs
+WRKSRC=		/usr/zfstor_docs
 
 checksum fetch:
 	echo ${.TARGET} not needed because building direct
