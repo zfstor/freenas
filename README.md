@@ -8,13 +8,13 @@ FreeNAS 9 is/was a stable product. FreeNAS 10 was a rewrite from the ground up a
 
 # Building ZFStor
 
-* ZFStor 9.10:	https://github.com/zfstor/build
+* https://github.com/zfstor/build
 
 To build the system (experts only):
 
 ## Requirements:
 
-* Your build environment must be FreeBSD 10.
+* Your build environment must be FreeBSD 12-CURRENT.
 
 * an amd64 capable processor.  8GB of memory, or an equal/greater amount
   of swap space, is also required
