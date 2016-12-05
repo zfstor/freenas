@@ -3,7 +3,7 @@
 
 PORTNAME=	grub2-pcbsd
 PORTVERSION=	2.02q
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.pcbsd.org/~kris/software/ \
 		ftp://ftp.pcbsd.org/pub/software/
@@ -21,7 +21,6 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 WRKSRC=		${WRKDIR}/grub-2.02
 CONFLICTS=	grub-0* grub2-2*
 SSP_UNSAFE=	yes
-USE_GCC=	yes
 ACLOCAL_ARGS=	-Im4
 GNU_CONFIGURE=	yes
 USES=		autoreconf bison cpe gettext gmake makeinfo python tar:xz
