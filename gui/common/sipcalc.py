@@ -24,6 +24,8 @@
 #
 # $FreeBSD$
 #####################################################################
+import ipaddress
+import netif
 import string
 
 from freenasUI.common.pipesubr import pipeopen
@@ -46,7 +48,11 @@ class sipcalc_base_type(object):
             self.sipcalc_args.append(str(network))
 
         if self.iface:
-            self.sipcalc_args.append(str(self.iface))
+            iface = netif.get_interface(self.iface)
+            for addr in iface.addresses:
+                if addr.af != netif.AddressFamily.INET:
+                    continue
+                self.sipcalc_args.append(str(ipaddress.IPv4Interface(unicode('{}/{}'.format(str(addr.address), str(addr.netmask))))))
 
         # If we already have the results of the `sipcalc` shell call
         # then do not do a redudant second call
