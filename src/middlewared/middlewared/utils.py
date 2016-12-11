@@ -86,3 +86,15 @@ def filter_list(_list, filters=None, options=None):
         return rv[0]
 
     return rv
+
+
+class Nid(object):
+
+    def __init__(self, _id):
+        self._id = _id
+
+    def __call__(self):
+        num = self._id
+        self._id += 1
+        return num
+
